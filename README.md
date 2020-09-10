@@ -1,10 +1,10 @@
-# automatic-market-maker
+# Market Maker
 a simple proof of concept bot for market making using the Deversify API
 
-# running the bot
-`git clone repository`
-`npm i`
-`yarn start` - ignore the TypeScript error: `Failed to load tsconfig.json: Missing baseUrl in compilerOptions`
+# Running the bot
+* `git clone repository`
+* `npm i`
+* `yarn start` - ignore the TypeScript error: `Failed to load tsconfig.json: Missing baseUrl in compilerOptions`
 
 The bot will execute every 5 seconds as follows:
 
@@ -21,12 +21,13 @@ The bot will execute every 5 seconds as follows:
 * matching asks with bids is done randomly, i.e. it should pick the bid which is closest to the ask and vice versa
 
 ## Initial Conditions
-in [maket-maker.ts](./automatic-market-maker/src/market-maker.ts) you can change:
+in [maket-maker.ts](./src/index.ts) you can change:
 * initial ETH balance
 * initial USD balance
 * percentage of your portfolio that you would like to spend per round
   * a value of `0.1` will spend a maximum of 0.1% of your ETH and 0.1% of your USD
 * percentOffBestOffer - how far you will vary from the current best offer on the market (in percentage)
 
-# run tests
-yarn test
+# Run tests
+
+* `yarn test`
